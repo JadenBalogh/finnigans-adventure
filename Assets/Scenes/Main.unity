@@ -494,12 +494,12 @@ MonoBehaviour:
   hitEffectPrefab: {fileID: 3651823660084588098, guid: 6ab5df2b3313bef41a1d27ada3f408c2, type: 3}
   luckEventTiers:
   - probability: 0.1
-    triggerEffectPrefab: {fileID: 3651823660084588098, guid: 6ab5df2b3313bef41a1d27ada3f408c2, type: 3}
+    triggerEffectPrefab: {fileID: 1820073102608164370, guid: ddb52af72f3f84f46882b366ed2f3afa, type: 3}
     triggerSound: {fileID: 8300000, guid: e9ed69abcbd57524cafd2aabe08e8a61, type: 3}
     luckEvents:
     - {fileID: 11400000, guid: c37d6806ded0e6246aa4b697f782e13c, type: 2}
   - probability: 0.25
-    triggerEffectPrefab: {fileID: 3651823660084588098, guid: 6ab5df2b3313bef41a1d27ada3f408c2, type: 3}
+    triggerEffectPrefab: {fileID: 4607861904650460052, guid: 798c1132c21056547806bcb5df65f798, type: 3}
     triggerSound: {fileID: 8300000, guid: e9ed69abcbd57524cafd2aabe08e8a61, type: 3}
     luckEvents:
     - {fileID: 11400000, guid: 78a05c3583e895f48b1972cae9282588, type: 2}
@@ -509,12 +509,12 @@ MonoBehaviour:
     luckEvents:
     - {fileID: 11400000, guid: c7bfa14d344b02645b174b8fd1130438, type: 2}
   - probability: 0.1
-    triggerEffectPrefab: {fileID: 3651823660084588098, guid: 6ab5df2b3313bef41a1d27ada3f408c2, type: 3}
+    triggerEffectPrefab: {fileID: 5584685001138156330, guid: b1b624bc055c3a7468d801cbc0226ad5, type: 3}
     triggerSound: {fileID: 8300000, guid: 4c040f340067c3b47ad688f7f191ee48, type: 3}
     luckEvents:
     - {fileID: 11400000, guid: 8d878d127c2037c4a82b5b1b568b4772, type: 2}
   - probability: 0.05
-    triggerEffectPrefab: {fileID: 3651823660084588098, guid: 6ab5df2b3313bef41a1d27ada3f408c2, type: 3}
+    triggerEffectPrefab: {fileID: 6088070249628358413, guid: 26199b1acc251544e924ee7e63589408, type: 3}
     triggerSound: {fileID: 8300000, guid: 4c040f340067c3b47ad688f7f191ee48, type: 3}
     luckEvents:
     - {fileID: 11400000, guid: 8d878d127c2037c4a82b5b1b568b4772, type: 2}
@@ -526,7 +526,7 @@ MonoBehaviour:
   jumpAnim: {fileID: 11400000, guid: c62b2e717fb9d024b84ce0123b775826, type: 2}
   attackAnim: {fileID: 11400000, guid: 47872b76f331e9947ad498b579ba6e72, type: 2}
   jumpSound: {fileID: 8300000, guid: c9119e8f7063e3044905ded9b5506be5, type: 3}
-  swingSound: {fileID: 8300000, guid: c9119e8f7063e3044905ded9b5506be5, type: 3}
+  swingSound: {fileID: 8300000, guid: 6174728683612c940aae5f47c031e7e2, type: 3}
 --- !u!114 &748943994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,7 +1448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56cd7d0a4f08d7748b6d01806611b27c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 200
   hurtSound: {fileID: 8300000, guid: c9119e8f7063e3044905ded9b5506be5, type: 3}
 --- !u!82 &1279438487
 AudioSource:
