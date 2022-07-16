@@ -554,6 +554,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 129
+  yDeathThreshold: -5
   attackCooldown: 0.3
   attackRange: 1
   hitEffectPrefab: {fileID: 3651823660084588098, guid: 6ab5df2b3313bef41a1d27ada3f408c2, type: 3}
@@ -778,6 +779,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1329,6 +1331,7 @@ CompositeCollider2D:
       - {x: 10.000026, y: -2.00001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+  m_UseDelaunayMesh: 0
 --- !u!19719996 &1181283357
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -1345,6 +1348,7 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+  m_UseDelaunayMesh: 0
 --- !u!50 &1181283358
 Rigidbody2D:
   serializedVersion: 4
@@ -1516,6 +1520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
   followDist: 5
+  yDeathThreshold: -5
   maxHealth: 200
   idleAnim: {fileID: 11400000, guid: 50a4d1c6bb842fb419a57d9bb4c629fa, type: 2}
   moveAnim: {fileID: 11400000, guid: e100edc15993fa441a45f494484f1078, type: 2}
