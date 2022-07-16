@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GoodDamageEvent
   m_EditorClassIdentifier: 
   minDamage: 5
-  maxDamage: 8
+  maxDamage: 9

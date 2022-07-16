@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
     [Header("Sounds")]
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip swingSound;
-    [SerializeField] private AudioClip hitSound;
 
     private bool isGrounded = true;
     private bool canAttack = true;
@@ -98,13 +97,12 @@ public class Player : MonoBehaviour
                     cumulativeThreshold += tier.probability;
                     if (roll <= cumulativeThreshold)
                     {
+                        Instantiate(tier.triggerEffectPrefab, hit.point, Quaternion.identity);
+                        audioSource.PlayOneShot(tier.triggerSound);
                         tier.luckEvents[Random.Range(0, tier.luckEvents.Length)].Invoke(this, enemy);
                         break;
                     }
                 }
-
-                audioSource.PlayOneShot(hitSound);
-                Instantiate(hitEffectPrefab, hit.point, Quaternion.identity);
             }
         }
     }
