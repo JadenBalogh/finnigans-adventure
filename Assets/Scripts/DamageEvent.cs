@@ -10,7 +10,6 @@ public class DamageEvent : LuckEvent
 
     public override void Invoke(Player source, Enemy target)
     {
-        Debug.Log("Invoked!");
         float damage = Random.Range(minDamage, maxDamage);
         target.TakeDamage(damage);
     }
