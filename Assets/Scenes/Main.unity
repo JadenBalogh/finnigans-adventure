@@ -422,6 +422,7 @@ MonoBehaviour:
     m_Bits: 1
   attackCooldown: 0.3
   attackRange: 1
+  hitEffectPrefab: {fileID: 3651823660084588098, guid: 6ab5df2b3313bef41a1d27ada3f408c2, type: 3}
   enemyMask:
     serializedVersion: 2
     m_Bits: 128

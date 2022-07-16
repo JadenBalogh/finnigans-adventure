@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [Header("Combat")]
     [SerializeField] private float attackCooldown = 0.3f;
     [SerializeField] private float attackRange = 1f;
+    [SerializeField] private GameObject hitEffectPrefab;
     [SerializeField] private LayerMask enemyMask;
 
     private bool isGrounded = true;
@@ -54,6 +55,7 @@ public class Player : MonoBehaviour
             if (hit && hit.collider.TryGetComponent<Enemy>(out Enemy enemy))
             {
                 enemy.TakeDamage(1f);
+                Instantiate(hitEffectPrefab, hit.point, Quaternion.identity);
             }
         }
     }
