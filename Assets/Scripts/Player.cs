@@ -22,16 +22,24 @@ public class Player : MonoBehaviour
     [SerializeField] private Animation2D jumpAnim;
     [SerializeField] private Animation2D attackAnim;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip swingSound;
+    [SerializeField] private AudioClip hitSound;
+
     private bool isGrounded = true;
     private bool canAttack = true;
+    private Vector2 facingDir = Vector2.right;
     private WaitForSeconds attackWait;
 
+    private AudioSource audioSource;
     private Animator2D animator2D;
     private new Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         animator2D = GetComponent<Animator2D>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -55,6 +63,7 @@ public class Player : MonoBehaviour
         if (isJumping)
         {
             rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            audioSource.PlayOneShot(jumpSound);
         }
 
         if (isGrounded)
@@ -68,6 +77,7 @@ public class Player : MonoBehaviour
 
         if (inputX.x != 0)
         {
+            facingDir = new Vector2((int)Mathf.Sign(inputX.x), 0);
             spriteRenderer.flipX = rigidbody2D.velocity.x < 0;
         }
 
@@ -75,11 +85,13 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(_AttackCooldown());
             animator2D.Play(attackAnim, false, true);
+            audioSource.PlayOneShot(swingSound);
 
-            RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, Vector2.right, attackRange, enemyMask);
+            RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, facingDir, attackRange, enemyMask);
             if (hit && hit.collider.TryGetComponent<Enemy>(out Enemy enemy))
             {
                 enemy.TakeDamage(1f);
+                audioSource.PlayOneShot(hitSound);
                 Instantiate(hitEffectPrefab, hit.point, Quaternion.identity);
             }
         }
