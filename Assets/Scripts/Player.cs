@@ -44,6 +44,8 @@ public class Player : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         attackWait = new WaitForSeconds(attackCooldown);
+
+        GameManager.SetPlayer(this);
     }
 
     private void Update()
