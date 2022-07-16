@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 1.5f;
     [SerializeField] private float followDist = 6f;
+    [SerializeField] private float yDeathThreshold = -5f;
 
     [Header("Combat")]
     [SerializeField] private float maxHealth = 10f;
@@ -49,6 +50,11 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (transform.position.y <= yDeathThreshold)
+        {
+            Destroy(gameObject);
+        }
+
         Vector2 playerOffset = GameManager.Player.transform.position - transform.position;
 
         if (playerOffset.sqrMagnitude < followDist * followDist)

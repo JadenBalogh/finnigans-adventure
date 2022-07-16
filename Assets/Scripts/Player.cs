@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float groundedDist = 0.2f;
     [SerializeField] private LayerMask groundMask;
+    [SerializeField] private float yDeathThreshold = -5f;
 
     [Header("Combat")]
     [SerializeField] private float attackCooldown = 0.3f;
@@ -50,6 +52,11 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (transform.position.y <= yDeathThreshold)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         Vector2 inputX = Vector2.right * Input.GetAxis("Horizontal") * moveSpeed;
         Vector2 inputY = Vector2.up * rigidbody2D.velocity.y;
 
