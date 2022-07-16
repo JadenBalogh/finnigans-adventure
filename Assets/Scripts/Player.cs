@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float attackCooldown = 0.3f;
     [SerializeField] private float attackRange = 1f;
     [SerializeField] private GameObject hitEffectPrefab;
+    [SerializeField] private LuckEventTier[] luckEventTiers;
     [SerializeField] private LayerMask enemyMask;
 
     [Header("Animation")]
@@ -90,7 +91,18 @@ public class Player : MonoBehaviour
             RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, facingDir, attackRange, enemyMask);
             if (hit && hit.collider.TryGetComponent<Enemy>(out Enemy enemy))
             {
-                enemy.TakeDamage(1f);
+                float roll = Random.value;
+                float cumulativeThreshold = 0f;
+                foreach (LuckEventTier tier in luckEventTiers)
+                {
+                    cumulativeThreshold += tier.probability;
+                    if (roll <= cumulativeThreshold)
+                    {
+                        tier.luckEvents[Random.Range(0, tier.luckEvents.Length)].Invoke(this, enemy);
+                        break;
+                    }
+                }
+
                 audioSource.PlayOneShot(hitSound);
                 Instantiate(hitEffectPrefab, hit.point, Quaternion.identity);
             }
@@ -107,5 +119,14 @@ public class Player : MonoBehaviour
         canAttack = false;
         yield return attackWait;
         canAttack = true;
+    }
+
+    [System.Serializable]
+    public class LuckEventTier
+    {
+        public float probability = 0.1f;
+        public GameObject triggerEffectPrefab;
+        public AudioClip triggerSound;
+        public LuckEvent[] luckEvents;
     }
 }
