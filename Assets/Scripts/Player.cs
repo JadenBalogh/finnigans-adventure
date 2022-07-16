@@ -16,15 +16,25 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject hitEffectPrefab;
     [SerializeField] private LayerMask enemyMask;
 
+    [Header("Animation")]
+    [SerializeField] private Animation2D idleAnim;
+    [SerializeField] private Animation2D moveAnim;
+    [SerializeField] private Animation2D jumpAnim;
+    [SerializeField] private Animation2D attackAnim;
+
     private bool isGrounded = true;
     private bool canAttack = true;
     private WaitForSeconds attackWait;
 
+    private Animator2D animator2D;
     private new Rigidbody2D rigidbody2D;
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
+        animator2D = GetComponent<Animator2D>();
         rigidbody2D = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         attackWait = new WaitForSeconds(attackCooldown);
     }
 
@@ -47,9 +57,24 @@ public class Player : MonoBehaviour
             rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
+        if (isGrounded)
+        {
+            animator2D.Play(inputX.x != 0 ? moveAnim : idleAnim, true);
+        }
+        else
+        {
+            animator2D.Play(jumpAnim, true);
+        }
+
+        if (inputX.x != 0)
+        {
+            spriteRenderer.flipX = rigidbody2D.velocity.x < 0;
+        }
+
         if (canAttack && Input.GetButtonDown("Fire1"))
         {
             StartCoroutine(_AttackCooldown());
+            animator2D.Play(attackAnim, false, true);
 
             RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, Vector2.right, attackRange, enemyMask);
             if (hit && hit.collider.TryGetComponent<Enemy>(out Enemy enemy))
