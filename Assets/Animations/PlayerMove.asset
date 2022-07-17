@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83c84e9d2e33f94fb8da1a7ae5eccb2, type: 3}
   m_Name: PlayerMove
   m_EditorClassIdentifier: 
-  frameRate: 6
+  frameRate: 12
   frames:
-  - {fileID: 902145420, guid: c5ada2dd67676cd4e97eb9cc88dea3bd, type: 3}
-  - {fileID: 21300000, guid: c1b833d8f3c9cf64bb08a03b53317d20, type: 3}
+  - {fileID: 1643967104, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: -664457593, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: 30040489, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: 1325100008, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: 666667843, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: -2128056139, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: -1598282618, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: -674075417, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: -1362929729, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: 1229702945, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: 1431672618, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
