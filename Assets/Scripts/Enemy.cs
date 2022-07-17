@@ -60,9 +60,9 @@ public class Enemy : MonoBehaviour
         if (playerOffset.sqrMagnitude < followDist * followDist)
         {
             Vector2 moveDir = Vector2.right * Mathf.Sign(playerOffset.x);
-            rigidbody2D.velocity = moveDir * moveSpeed;
+            rigidbody2D.velocity = moveDir * moveSpeed + Vector2.up * rigidbody2D.velocity.y;
             animator2D.Play(moveAnim, true);
-            spriteRenderer.flipX = rigidbody2D.velocity.x < 0;
+            spriteRenderer.flipX = rigidbody2D.velocity.x > 0;
         }
         else
         {
