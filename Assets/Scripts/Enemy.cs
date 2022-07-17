@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour
             Vector2 moveDir = Vector2.right * Mathf.Sign(playerOffset.x);
             rigidbody2D.velocity = moveDir * moveSpeed;
             animator2D.Play(moveAnim, true);
-            spriteRenderer.flipX = rigidbody2D.velocity.x < 0;
+            spriteRenderer.flipX = rigidbody2D.velocity.x > 0;
         }
         else
         {

@@ -779,7 +779,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1331,7 +1330,6 @@ CompositeCollider2D:
       - {x: 10.000026, y: -2.00001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
 --- !u!19719996 &1181283357
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -1348,7 +1346,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
-  m_UseDelaunayMesh: 0
 --- !u!50 &1181283358
 Rigidbody2D:
   serializedVersion: 4
@@ -1454,8 +1451,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -316827041, guid: c5ada2dd67676cd4e97eb9cc88dea3bd, type: 3}
-  m_Color: {r: 1, g: 0.3915094, b: 0.3915094, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0d2580428eefd844da6dfb11e615156b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1497,7 +1494,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1522,9 +1519,9 @@ MonoBehaviour:
   followDist: 5
   yDeathThreshold: -5
   maxHealth: 200
-  idleAnim: {fileID: 11400000, guid: 50a4d1c6bb842fb419a57d9bb4c629fa, type: 2}
-  moveAnim: {fileID: 11400000, guid: e100edc15993fa441a45f494484f1078, type: 2}
-  hurtAnim: {fileID: 11400000, guid: c62b2e717fb9d024b84ce0123b775826, type: 2}
+  idleAnim: {fileID: 11400000, guid: bb8cf8e07ae5b4d47a68610e48c5e8d5, type: 2}
+  moveAnim: {fileID: 11400000, guid: 5597d809f81f86343b8dbba3f1f7dcb8, type: 2}
+  hurtAnim: {fileID: 11400000, guid: 2dbda6ce652d5e94d8ec65795be86400, type: 2}
   hurtSound: {fileID: 8300000, guid: c9119e8f7063e3044905ded9b5506be5, type: 3}
 --- !u!82 &1279438487
 AudioSource:
