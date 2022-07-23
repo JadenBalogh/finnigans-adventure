@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83c84e9d2e33f94fb8da1a7ae5eccb2, type: 3}
   m_Name: PlayerMove
   m_EditorClassIdentifier: 
-  frameRate: 16
+  frameRate: 21
   frames:
-  - {fileID: 1643967104, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
-  - {fileID: -664457593, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
-  - {fileID: 30040489, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
-  - {fileID: 1325100008, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
-  - {fileID: 666667843, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
-  - {fileID: -2128056139, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
-  - {fileID: -1598282618, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
-  - {fileID: -674075417, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
-  - {fileID: -1362929729, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
-  - {fileID: 1229702945, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
-  - {fileID: 1431672618, guid: 73ac5d113e498471faa51b3513072c04, type: 3}
+  - {fileID: 865407360, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: 700119694, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: -263046059, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: -935816810, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: -89324837, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: -1332850972, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: 1561647568, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: 1086271042, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: 1837397805, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: 1857478929, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: 1072069401, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: 1394938236, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: -1266438965, guid: b43c58214e94145288e01dd121b22686, type: 3}
+  - {fileID: -601039752, guid: b43c58214e94145288e01dd121b22686, type: 3}

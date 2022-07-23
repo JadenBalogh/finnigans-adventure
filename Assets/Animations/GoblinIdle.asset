@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frameRate: 1
   frames:
-  - {fileID: 21300000, guid: 0d2580428eefd844da6dfb11e615156b, type: 3}
+  - {fileID: 2004025704, guid: 5bba759f666d64d418b2d502adc8629a, type: 3}
